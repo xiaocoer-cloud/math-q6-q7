@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>第6题 &amp; 第7题 · 两处 1 分丢在哪｜八年级数学错题复盘</title>
+<meta name="description" content="八年级数学第6题、第7题错题精讲：一次函数作图规范与等腰三角形漏解，互动演示，手机电脑都能看。">
+<meta name="theme-color" content="#f4efe3">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<canvas id="confetti" aria-hidden="true"></canvas>
+
+<header class="topbar">
+  <a class="brand" href="#top">
+    <span class="brand-dot"></span>
+    <span>数学 · 错题复盘</span>
+  </a>
+  <nav class="topnav" aria-label="页面导航">
+    <a href="#q6">第 6 题</a>
+    <a href="#q7">第 7 题</a>
+    <a href="#method">方法</a>
+    <a href="#practice">练习</a>
+    <a href="#summary">总结</a>
+  </nav>
+  <div class="top-actions">
+    <button id="soundBtn" class="icon-btn" aria-pressed="true" title="音效开关">
+      <svg class="ic-on" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <svg class="ic-off" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path d="M17 9l5 5m0-5l-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <span class="lbl">音效</span>
+    </button>
+  </div>
+  <div class="progress" id="progress"></div>
+</header>
+
+<main id="top">
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="kicker">八年级数学 · 11 月 4 日课后作业 · 第 6、7 题</p>
+      <h1>两处 <span class="score-inline">1&nbsp;分</span>，<br><span class="mark">丢在哪？</span></h1>
+      <p class="lede">
+        第 6 题 <b>15 / 16</b>，第 7 题 <b>24 / 25</b>。
+        你的计算几乎全对——真正扣分的，是<b>作图规范</b>和<b>漏了一种情况</b>。
+      </p>
+      <div class="chips">
+        <span class="chip chip-red">第 6 题 · 画图少画了一截</span>
+        <span class="chip chip-blue">第 7 题 · 等腰三角形漏解</span>
+      </div>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#q6">开始复盘
+          <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="#q7">直接看漏解</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <div class="paper-shadow"></div>
+      <div class="grade-card">
+        <div class="grade-head">
+          <span class="grade-title">八年级数学 · 课后作业</span>
+          <span class="grade-total">98 分</span>
+        </div>
+        <div class="grade-row">
+          <div>
+            <div class="grade-label">第 6 题</div>
+            <div class="grade-sub">一次函数图象</div>
+          </div>
+          <div class="grade-score">
+            <b class="count" data-to="15">0</b><span>/16</span>
+            <svg class="pen-circle" viewBox="0 0 120 60" aria-hidden="true"><path d="M92 10c12 8 16 22 10 32-7 12-30 16-52 14C30 54 10 46 8 34 6 20 26 10 52 8c22-2 40 2 44 8"/></svg>
+          </div>
+        </div>
+        <div class="grade-row">
+          <div>
+            <div class="grade-label">第 7 题</div>
+            <div class="grade-sub">等腰三角形分类</div>
+          </div>
+          <div class="grade-score">
+            <b class="count" data-to="24">0</b><span>/25</span>
+            <svg class="pen-circle" viewBox="0 0 120 60" aria-hidden="true"><path d="M92 10c12 8 16 22 10 32-7 12-30 16-52 14C30 54 10 46 8 34 6 20 26 10 52 8c22-2 40 2 44 8"/></svg>
+          </div>
+        </div>
+        <div class="grade-note">
+          <span class="red-pen">计算全对</span>
+          <span>扣分点：作图不完整 · 漏解</span>
+        </div>
+      </div>
+      <svg class="hero-sketch" viewBox="0 0 260 160" aria-hidden="true">
+        <g stroke="#8b7d63" stroke-width="1" opacity=".55">
+          <path d="M20 130H245M50 150V10"/>
+          <path d="M50 130L210 30" stroke="#d6452f" stroke-width="2" opacity=".8"/>
+          <circle cx="50" cy="130" r="3" fill="#1e2a3a"/>
+          <circle cx="160" cy="58" r="3" fill="#1e2a3a"/>
+        </g>
+        <text x="44" y="148" font-size="10" fill="#6b6151">A</text>
+        <text x="158" y="50" font-size="10" fill="#6b6151">B</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ================= Q6 ================= -->
+  <section class="section" id="q6">
+    <div class="sec-head">
+      <p class="kicker">01 / 第 6 题 · 15 / 16</p>
+      <h2>算得都对，为什么还扣 1 分？</h2>
+      <p class="sec-sub">这 1 分不在计算上，在<b>作图</b>上。先看题，再看你的解答，最后自己动手画一遍。</p>
+    </div>
+
+    <div class="qcard">
+      <div class="qcard-head"><span class="qno">6</span><span class="qmeta">（16 分）</span></div>
+      <p class="qtext">已知一次函数 <span class="math">y = −<span class="frac"><span>4</span><span>3</span></span>x + 4</span> 的图象与 x 轴交于点 A，与 y 轴交于点 B。</p>
+      <ol class="qparts">
+        <li>求点 A、B 的坐标，并在直角坐标系中画出函数 <span class="math">y = −<span class="frac"><span>4</span><span>3</span></span>x + 4</span> 的图象；</li>
+        <li>求 △AOB 的面积；</li>
+        <li>若一次函数 <span class="math">y = kx − 2</span> 的图象经过点 A，求它的表达式。</li>
+      </ol>
+    </div>
+
+    <div class="two-col">
+      <div class="card">
+        <h3 class="card-title">你的解答 <span class="pill pill-green">全对</span></h3>
+        <ul class="steps">
+          <li>
+            <span class="step-no">1</span>
+            <div><b>求 A、B</b>
+              <p>x = 0 → y = 4，所以 B(0, 4)；<br>y = 0 → 0 = −4/3·x + 4 → x = 3，所以 A(3, 0)。</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-no">2</span>
+            <div><b>面积</b>
+              <p>S<sub>△AOB</sub> = ½ × OA × OB = ½ × 3 × 4 = <b>6</b>。</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-no">3</span>
+            <div><b>求解析式</b>
+              <p>把 A(3, 0) 代入 y = kx − 2：0 = 3k − 2 → k = 2/3，<br>所以 <b>y = 2/3·x − 2</b>。</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card card-red">
+        <h3 class="card-title">扣分点：作图 <span class="pill pill-red">−1</span></h3>
+        <p class="card-lede">你的直线确实经过了 B(0,4) 和 A(3,0)，但只从 B 画到 A 下方一点，<b>两端都没有画出网格</b>。</p>
+        <ul class="ticks">
+          <li class="ok">过两点 —— 你做到了</li>
+          <li class="no">两端要“画出头”：一次函数的图象是<b>直线</b>，要延长出网格，通常带箭头</li>
+          <li class="no">交点最好点上实心点，标出 A(3,0)、B(0,4)</li>
+          <li class="ok">用直尺画 —— 卷面上这条线基本是直的</li>
+        </ul>
+        <p class="card-note">这 1 分不是“不会”，是“画得不完整”。下次记住：<b>一次函数图象 = 一条穿出网格的直线</b>。</p>
+      </div>
+    </div>
+
+    <!-- interactive graph -->
+    <div class="lab">
+      <div class="lab-head">
+        <div>
+          <p class="kicker">动手实验</p>
+          <h3>让这条直线经过 A 点</h3>
+        </div>
+        <p class="lab-tip">拖动滑块改变斜率 k，直线始终经过 B(0,4)。看看什么时候正好穿过 A(3,0)。</p>
+      </div>
+      <div class="graph-wrap">
+        <svg id="q6svg" viewBox="0 0 560 400" role="img" aria-label="一次函数 y=kx+4 的互动图象"></svg>
+      </div>
+      <div class="controls">
+        <label class="slider-label">斜率 k
+          <input id="kSlider" type="range" min="-2.2" max="-0.4" step="0.01" value="-0.9">
+          <output id="kOut">−0.90</output>
+        </label>
+        <button class="btn btn-small" id="snapBtn">用直尺过两点</button>
+        <button class="btn btn-small btn-ghost" id="studentBtn">看我卷面上的画法</button>
+      </div>
+      <div class="readout">
+        <span class="ro-item">与 x 轴交点：<b id="xInt">4.44</b></span>
+        <span class="ro-item" id="passA">还没经过 A(3,0)</span>
+        <span class="ro-item ok" id="passB">始终经过 B(0,4)</span>
+      </div>
+      <p class="lab-msg" id="q6msg">把 k 调到 −4/3，直线就会正好经过 A。</p>
+    </div>
+
+    <details class="scan">
+      <summary>看卷面原图（你的作图）</summary>
+      <div class="scan-body">
+        <img src="assets/scan-q6.jpg" alt="第6题学生作答扫描：坐标图与解题过程" loading="lazy">
+        <p>红笔 15/16：坐标、面积、解析式都对；扣的 1 分在图象只画了一小段、没有向两端延长。</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ================= Q7 ================= -->
+  <section class="section" id="q7">
+    <div class="sec-head">
+      <p class="kicker">02 / 第 7 题 · 24 / 25</p>
+      <h2>四种情况，你只找到了三种</h2>
+      <p class="sec-sub">等腰三角形要“三边两两相等”分三类。你的第三类少考虑了一半，漏掉了 <b>M(2, 0)</b>。</p>
+    </div>
+
+    <div class="qcard">
+      <div class="qcard-head"><span class="qno">7</span><span class="qmeta">（25 分）</span></div>
+      <p class="qtext">如图，直线 <span class="math">y = <span class="frac"><span>4</span><span>3</span></span>x + 4</span> 与 x 轴相交于点 A，与 y 轴相交于点 B。</p>
+      <ol class="qparts">
+        <li>求点 A、B 的坐标。</li>
+        <li>过点 B 作直线 BP 与 x 轴相交于点 P，且使 OP = 2OA，求 △ABP 的面积。</li>
+        <li>如果 x 轴上有一动点 M，要使以 A、B、M 为顶点的三角形构成等腰三角形，请探究并求出所有符合条件的 M 点坐标。</li>
+      </ol>
+    </div>
+
+    <div class="two-col">
+      <div class="card">
+        <h3 class="card-title">(1)(2) 你做得很好 <span class="pill pill-green">全对</span></h3>
+        <ul class="steps compact">
+          <li><span class="step-no">1</span><div><b>A(−3, 0)，B(0, 4)</b><p>令 y=0 得 x=−3；令 x=0 得 y=4。</p></div></li>
+          <li><span class="step-no">2</span><div><b>OP = 2OA = 6</b><p>OA = 3，所以 OP = 6，P(6,0) 或 P(−6,0)。</p></div></li>
+          <li><span class="step-no">3</span><div><b>面积</b><p>P(6,0)：AP = 9，S = ½×9×4 = <b>18</b>；<br>P(−6,0)：AP = 3，S = ½×3×4 = <b>6</b>。</p></div></li>
+        </ul>
+      </div>
+      <div class="card card-red">
+        <h3 class="card-title">扣分点：漏解 <span class="pill pill-red">−1</span></h3>
+        <p class="card-lede">你写的是：M(3,0)、(−8,0)、(7/6,0) 三个点。</p>
+        <p>漏了 <b class="red-pen">M(2, 0)</b>。</p>
+        <p class="card-note">原因：在“AB = AM”这一类里，你只算了 M 在 A <b>左边</b>的情况（MO = AM + AO = 8）。<br>
+          但 AM = 5，M 也可以在 A 的<b>右边</b>：m = −3 + 5 = <b>2</b>。</p>
+      </div>
+    </div>
+
+    <!-- interactive isosceles explorer -->
+    <div class="lab">
+      <div class="lab-head">
+        <div>
+          <p class="kicker">动手实验</p>
+          <h3>拖动 M，把四种情况找全</h3>
+        </div>
+        <p class="lab-tip">拖动 x 轴上的 M 点，观察三条边。当两条边相等时，M 会“吸附”成一个解。</p>
+      </div>
+      <div class="graph-wrap">
+        <svg id="q7svg" viewBox="0 0 760 320" role="img" aria-label="等腰三角形动点 M 的互动演示"></svg>
+      </div>
+      <div class="tri-readout">
+        <span class="side-tag tag-ab">AB <b id="abVal">5.00</b></span>
+        <span class="side-tag tag-am">AM <b id="amVal">—</b></span>
+        <span class="side-tag tag-bm">BM <b id="bmVal">—</b></span>
+      </div>
+      <div class="cond-row">
+        <span class="cond" id="cond1">AB = AM</span>
+        <span class="cond" id="cond2">BA = BM</span>
+        <span class="cond" id="cond3">MA = MB</span>
+      </div>
+      <div class="tri-readout">
+        <span class="side-tag" id="mCoord">M(0.8, 0)</span>
+      </div>
+      <div class="found-list" id="foundList" aria-live="polite"></div>
+      <div class="lab-foot">
+        <span class="found">已找到 <b id="foundCount">0</b> / 4</span>
+        <button class="btn btn-small" id="autoBtn">自动找全</button>
+        <button class="btn btn-small btn-ghost" id="resetBtn">重来</button>
+      </div>
+      <p class="lab-msg" id="q7msg">先拖动 M 试试。提示：答案分布在 A 的左右两边。</p>
+    </div>
+
+    <div class="case-table-wrap">
+      <h3 class="card-title">四类情况，逐一列方程</h3>
+      <table class="case-table">
+        <thead>
+          <tr><th>情况</th><th>方程</th><th>解得</th><th>取舍</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>AB = AM</td><td>|m + 3| = 5</td><td>m = 2 或 m = −8</td><td>两解都要</td></tr>
+          <tr><td>BA = BM</td><td>√(m² + 16) = 5</td><td>m = 3 或 m = −3</td><td>m = −3 与 A 重合，舍去</td></tr>
+          <tr><td>MA = MB</td><td>(m + 3)² = m² + 16</td><td>m = 7/6</td><td>一解</td></tr>
+        </tbody>
+      </table>
+      <p class="case-note">综上：<b>M(2,0)、(3,0)、(−8,0)、(7/6,0)</b>，共 4 个。</p>
+    </div>
+
+    <details class="scan">
+      <summary>看卷面原图（你的第 7 题）</summary>
+      <div class="scan-body">
+        <img src="assets/scan-q7.jpg" alt="第7题学生作答扫描：A、B、P 与等腰三角形分类" loading="lazy">
+        <p>红笔 24/25：A、B、P、面积、三类情况都写了；第三类只取了 A 左边的一个解。</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ================= METHOD ================= -->
+  <section class="section" id="method">
+    <div class="sec-head">
+      <p class="kicker">03 / 方法</p>
+      <h2>下次遇到同类题，按这三步走</h2>
+    </div>
+    <div class="method-grid">
+      <div class="method-card">
+        <span class="method-no">01</span>
+        <h3>等腰三角形：三边两两相等</h3>
+        <p>AB = AM、BA = BM、MA = MB，三种情况各列一个方程。不要只画一种“看起来像”的图。</p>
+        <div class="method-demo">
+          <span>AB=AM</span><span>BA=BM</span><span>MA=MB</span>
+        </div>
+      </div>
+      <div class="method-card">
+        <span class="method-no">02</span>
+        <h3>绝对值 / 平方：记得两解</h3>
+        <p>|m + 3| = 5 表示“到 −3 的距离是 5”，左右各一个：m = 2 或 −8。解完还要检验是否与已知点重合。</p>
+        <div class="method-demo">
+          <span class="numline">−8</span><span class="numline">−3 (A)</span><span class="numline">2</span>
+        </div>
+      </div>
+      <div class="method-card">
+        <span class="method-no">03</span>
+        <h3>作图：过两点、画出头</h3>
+        <p>算出两个点 → 用直尺连线 → 两端延长出网格 → 交点标实心点。一次函数的图象是一条<b>直线</b>，不是线段。</p>
+        <div class="method-demo">
+          <span>两点</span><span>直尺</span><span>延长</span><span>标点</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PRACTICE ================= -->
+  <section class="section" id="practice">
+    <div class="sec-head">
+      <p class="kicker">04 / 举一反三</p>
+      <h2>换两个数，再试一次</h2>
+    </div>
+
+    <div class="practice-list">
+      <article class="pq" data-pq="1">
+        <p class="pq-stem">1. 已知 A(3, 0)、B(0, 4)，x 轴上有一点 M，使 △ABM 是等腰三角形。符合条件的 M 点共有几个？</p>
+        <div class="pq-options">
+          <button data-k="A">A. 2 个</button>
+          <button data-k="B">B. 3 个</button>
+          <button data-k="C">C. 4 个</button>
+          <button data-k="D">D. 5 个</button>
+        </div>
+        <p class="pq-exp">正确答案 <b>C</b>。AB = 5；AB=AM → m = 8 或 −2；BA=BM → m = −3 或 3（3 与 A 重合舍去）；MA=MB → m = −7/6。共 4 个：8、−2、−3、−7/6。</p>
+      </article>
+
+      <article class="pq" data-pq="2">
+        <p class="pq-stem">2. 下列说法正确的是（　　）</p>
+        <div class="pq-options col">
+          <button data-k="A">A. 算出两个点后，徒手连起来就行</button>
+          <button data-k="B">B. 一次函数的图象是直线，要过两点并向两端延长</button>
+          <button data-k="C">C. 图象只要经过一个点就能确定</button>
+        </div>
+        <p class="pq-exp">正确答案 <b>B</b>。两点确定一条直线；作图要用直尺，并把直线延长出网格，交点标清楚。</p>
+      </article>
+
+      <article class="pq" data-pq="3">
+        <p class="pq-stem">3. 直线 y = −2x + 6 与 x 轴交于 A，与 y 轴交于 B，则 △AOB 的面积是（　　）</p>
+        <div class="pq-options">
+          <button data-k="A">A. 3</button>
+          <button data-k="B">B. 6</button>
+          <button data-k="C">C. 9</button>
+          <button data-k="D">D. 12</button>
+        </div>
+        <p class="pq-exp">正确答案 <b>C</b>。A(3,0)，B(0,6)，S = ½ × 3 × 6 = 9。</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= SUMMARY ================= -->
+  <section class="section" id="summary">
+    <div class="sec-head">
+      <p class="kicker">05 / 带走这张卡</p>
+      <h2>会算，不等于满分</h2>
+    </div>
+    <div class="summary-card">
+      <p class="big-line">两处 1 分，都不是“不会”：<br>一处<b>画得不完整</b>，一处<b>分类少了一半</b>。</p>
+      <ul class="sum-list">
+        <li><span>01</span>一次函数图象：过两点 + 用直尺 + 两端延长 + 标交点。</li>
+        <li><span>02</span>等腰三角形：三边两两相等，三种情况逐一列方程。</li>
+        <li><span>03</span>绝对值方程：|m+3|=5 有两个解，别只取一边。</li>
+        <li><span>04</span>解完检验：与已知点重合、三点共线的，要舍去。</li>
+      </ul>
+      <div class="sum-actions">
+        <button class="btn btn-primary" id="copyBtn">复制这段总结</button>
+        <a class="btn btn-ghost" href="#practice">再练一题</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>八年级数学 · 11 月 4 日课后作业 · 第 6、7 题错题复盘</p>
+  <p class="foot-sub">根据你的原卷与作答整理 · 仅供学习参考</p>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="app.js"></script>
+</body>
+</html>
